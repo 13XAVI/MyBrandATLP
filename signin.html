@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIGNIN</title>
   <link rel="stylesheet" href="./components/css/Signin.css">
-  <script src="./components/JS/Signup.js" defer type="module"></script>
+  <script src="./components/JS/Signin.js" defer></script>
 </head>
 <body>
 
@@ -20,41 +20,39 @@
           <a href="index.html" class="nav-content-contact">Contact us</a>
           <a href="#" class="nav-content-portfolio">Portfolio</a>
           <a href="index.html" class="nav-content-blog">Blog</a>
-          <a   href="Signup.html" class="button-signup">
-            <button class=btn-signup>Signup</button>
+          <a   href="signin.html" class="button-signup">
+            <button class=btn-signup>Login</button>
           </a>
     </div>
   </div>
   <div class="wrapper">
     <div class="sign-panels">
         <div class="login">
-            <div class="title">
-                <span>LOGIN</span>
-                <p>Welcome back, please login to your account. </p>
-            </div>
-  
-            
-  
-            <form action="">
-                <input type="email" placeholder="Email">
-                <span id="error-email"></span>
-                <input type="password" placeholder="Password">
-                <span id="error-password"></span>
-
-
-                <a href="#" class="btn-signin">Sign In</a>
-  
-
-                <a href="Signup.html" class="btn-member btn-fade">Create account? <i class="fa fa-long-arrow-right"
-                                                                             aria-hidden="true"></i></a>
-            </form>
+              <div class="login">
+                  <div class="title">
+                      <span>LOGIN</span>
+                      <p>Welcome back, please login to your account. </p>
+                  </div>
+          <form id="signInForm">
+            <input type="email" placeholder="Email" id="email">
+            <span id="error-email"></span>
+            <input type="password" placeholder="Password" id="password">
+            <span id="error-password"></span>
+            <div id="loadingMessage">Sending message...</div>
+            <div id="errorMessage"></div>
+            <button type="submit" class="btn-signin" >Sign In</button>
+        
+            <a href="Signup.html" class="btn-member btn-fade">Create account? <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        
             <span id="success-form"></span>
-            <div class="or"><span>OR</span></div>
-          <div class="btn-media">
-            <button href="#" class="btn-google" id="btn-google"><img src="./components/images/google.png" alt="" class="img-icon-social"></button>
-            <button href="#" class="btn-github" id="btn-github"><img src="./components/images/github.png" alt="" class="img-icon-social"></button>
-            
-        </div>
+          </form>
+                 
+                  <div class="or"><span>OR</span></div>
+                  <div class="btn-media">
+                      <button href="#" class="btn-google" id="btn-google"><img src="./components/images/google.png" alt="" class="img-icon-social"></button>
+                      <button href="#" class="btn-github" id="btn-github"><img src="./components/images/github.png" alt="" class="img-icon-social"></button>
+                  </div>
+              </div>
 
           
         </div>

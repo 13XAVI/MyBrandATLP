@@ -49,13 +49,16 @@ const Myform = document.getElementById("Signup-form");
 
 
 Myform.addEventListener("submit", async (event) => {
+  var errorMessage = document.getElementById("errorMessage");
+  var loadingMessage = document.getElementById("loadingMessage");
+  loadingMessage.style.display = "none";
   event.preventDefault();
-  const username = document.getElementById("name").value;
+  const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirm-password").value;
 
-  if (!username || !email || !password || !confirmPassword) {
+  if (!name || !email || !password || !confirmPassword) {
     console.error("All fields are required");
     return;
   }
@@ -66,13 +69,14 @@ Myform.addEventListener("submit", async (event) => {
   }
 
   const userData = {
-    username: username,
+    name: name,
     email: email,
     password: password,
+    role:"user"
   };
 
   try {
-    const response = await fetch("http://localhost:3000/api/V1/User/Create", {
+    const response = await fetch("https://portfolioatlpbackend.onrender.com/api/V1/User/Create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -83,14 +87,17 @@ Myform.addEventListener("submit", async (event) => {
     if (!response.ok) {
       const responseData = await response.json();
       console.error("Error:", response.status, responseData.error);
-      // Display error message to the user
       return;
     }
-
+    loadingMessage.style.display = "none";
     window.location.href = "index.html";
   } catch (error) {
     console.error("Error:", error);
-    // Display error message to the user
+    errorMessage.innerHTML=error
+        errorMessage.style.display = "block";
+        setTimeout(function() {
+            loadingMessage.style.display = "none";
+          }, 5000);
   }
 });
 

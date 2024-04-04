@@ -19,8 +19,8 @@
           <a href="#contact" class="nav-content-contact">Contact us</a>
           <a href="" class="nav-content-portfolio">Portfolio</a>
           <a href="#blogs" class="nav-content-blog">Blog</a>
-          <a   href="Signup.html" class="button-signup">
-            <button class=btn-signup>Signup</button>
+          <a   href="signin.html" class="button-signup">
+            <button class=btn-signup>Login</button>
           </a>
         </div>
       </div>
@@ -85,13 +85,16 @@
             </div>
           <div class="form-group-password">
             <label for="fullName">User Email</label>
-            <input type="email"  class="inp-form">
+            <input type="email"  class="inp-form" id="email">
           </div>
           <div class="form-group-message">
             <label for="fullName">Message</label>
-            <textarea rows="5" cols="50" class="message"></textarea>
+            <textarea rows="5" cols="50" class="message" id="message"></textarea>
           </div>
-          <button class="btn-contact">Send Message</button>
+          <div id="loadingMessage">Sending message...</div>
+          <div id="errorMessage"></div>
+          <button id="sendMessage" class="btn-contact">Send Message</button>
+          
         </div>
           </div>
 
@@ -202,8 +205,23 @@
             <button class="btn-arrow"><a  href="SingleBlog.html"  class="auth-logo">More</a></button>
           </div> 
         </div>
+      </div>
+      <h1 class="trendings">My Projects</h1>
+      <div class="allcards">
+       
         <div class="card">
-          <img src="./components/images/robot-handshake-human-background-futuristic-digital-age.jpg" alt="" class="image-card">
+          <img src="./components/images/standard-quality-control-concept-m.jpg" alt="" class="image-card">
+          <div class="description">
+            <p class="descriptio-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non fugiat unde consectetur in at exercitationem tempora reprehenderit laboriosam sit blanditiis, ratione quae provident, aliquam optio architecto quos. Velit, quam.</p>
+          </div>
+          <div class="log-des">
+            <img src="./components/images/Logo.jpg" alt="" class="profile-photo">
+            <p class="authordescription"> Mr.Tresor</p>
+            <button class="btn-arrow"><a href="SingleBlog.html"  class="auth-logo">More</a></button>
+          </div> 
+        </div>
+        <div class="card">
+          <img src="./components/images/ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg" alt="" class="image-card">
           <div class="description">
             <p class="descriptio-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non fugiat unde consectetur in at exercitationem tempora reprehenderit laboriosam sit blanditiis, ratione quae provident, aliquam optio architecto quos. Velit, quam.</p>
           </div>
@@ -214,28 +232,16 @@
           </div> 
         </div>
         <div class="card">
-          <img src="./components/images/4955.jpg" alt="" class="image-card">
+          <img src="./components/images/excited-black-man-exploring-virtual-reality-office.jpg" alt="" class="image-card">
           <div class="description">
             <p class="descriptio-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non fugiat unde consectetur in at exercitationem tempora reprehenderit laboriosam sit blanditiis, ratione quae provident, aliquam optio architecto quos. Velit, quam.</p>
           </div>
           <div class="log-des">
             <img src="./components/images/Logo.jpg" alt="" class="profile-photo">
             <p class="authordescription"> Mr.Tresor</p>
-            <button class="btn-arrow"><a href="SingleBlog.html" class="auth-logo">More</a></button>
+            <button class="btn-arrow"><a  href="SingleBlog.html"  class="auth-logo">More</a></button>
           </div> 
         </div>
-        <div class="card">
-          <img src="./components/images/cloud-computing-banner-background-smart-city.jpg" alt="" class="image-card">
-          <div class="description">
-            <p class="descriptio-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non fugiat unde consectetur in at exercitationem tempora reprehenderit laboriosam sit blanditiis, ratione quae provident, aliquam optio architecto quos. Velit, quam.</p>
-          </div>
-          <div class="log-des">
-            <img src="./components/images/Logo.jpg" alt="" class="profile-photo">
-            <p class="authordescription"> Mr.Tresor</p>
-            <button class="btn-arrow"><a href="SingleBlog.html"  class="auth-logo">More</a></button>
-          </div> 
-        </div>
-
       </div>
         
     </section>
@@ -290,7 +296,7 @@
     </div>
   </body>
 
-  <script src="./components/components/js.js" >
+  <script src="./components/JS/querry.js" defer>
     
   </script>
 </html>
