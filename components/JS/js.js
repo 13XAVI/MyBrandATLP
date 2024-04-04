@@ -113,89 +113,54 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    function DisplayData() {
-        var blogList;
-        if (localStorage.getItem("Form Data") == null) {
-            blogList = [];
-        } else {
-            blogList = JSON.parse(localStorage.getItem("Form Data"));
-        }
-    
-        var html = "";
-        blogList.forEach(function (element, index) {
-            
-            html += "<tr>"
-            html += "<td>" + index + "</td>"
-            html += "<td>" + element.postTitle + "</td>"
-            html += "<td>" + element.postThumbnail + "</td>"
-            html += "<td>" + element.postDescription + "</td>"
-            html += "<td>" + element.postDate + "</td>"
-            html += "<td>" + element.emailNotification + "</td>"
-            html += "<td>" + element.author + "</td>"
-
-            html += "<td>" + '<button onclick="DeleteData(' +
-                index +
-                ')" class="btn-danger" id="Deleted">Delete</button><button onclick = "EditData(' +
-                index +
-                ')" class="btn-Edit" id="Edit">Edit</button ></td>';
-            html += "</tr>";
-        });
+        const token = localStorage.getItem('token')
+        fetch('https://portfolioatlpbackend.onrender.com/api/V1/Blog/All',{
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById("table-body");
+                data.forEach(blog => {
+                    const date = new Date(blog.date).toLocaleDateString();
+                    const createdAt = new Date(blog.createdAt).toLocaleString();
+                    tableBody.innerHTML += `
+                        <tr>
+                            <td>${blog.title}</td>
+                            <td>${blog.file}</td>
+                            <td>${blog.description}</td>
+                            <td>${date}</td>
+                            <td>${createdAt}</td>
+                        </tr>
+                    `;
+                });
+            })
+            .catch(error => console.error('Error fetching blogs:', error));
         
-    
-        document.querySelector("#table-body").innerHTML = html
-        document.getElementById("Deleted").style.backgroundColor = "red"
-        document.querySelector("#Edit").style.backgroundColor = "green"
-        document.querySelector("#Delete").style.borderRadius = "10px"
-        document.querySelector("#Edit").style.borderRadius = "10px"
-        document.querySelector("#Edit").style.width = "75px"
-        document.querySelector("#Edit").style.marginLeft = "5px"
-    
-    }
-    
-    document.onload = DisplayData();
-
-
-
-    // function DeleteData(index) {
-       
-    //     blogList.splice(index, 1);
-    //     localStorage.setItem("Form Data", JSON.stringify(blogList)); 
-    //     DisplayData();
-    // }
-    
-    
-
-   
-    function UpdateData(index) {
-        
-    }
-
-    
-var modal = document.getElementById("myModal");
-
-
-var btn = document.getElementById("btn-action");
-
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
+        fetch('https://portfolioatlpbackend.onrender.com/api/V1/Blog/All',{
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                const cardContainer = document.getElementById("card-container");
+                data.forEach(blog => {
+                    const date = new Date(blog.date).toLocaleDateString();
+                    const createdAt = new Date(blog.createdAt).toLocaleString();
+                    cardContainer.innerHTML += `
+                        <div class="card">
+                            <img src="${blog.file}" alt="${blog.title}" class="card-image">
+                            <div class="card-content">
+                                <h2 class="card-title">${blog.title}</h2>
+                                <p class="card-description">${blog.description}</p>
+                                <p class="card-date">Date: ${date}</p>
+                                <p class="card-created-at">Created At: ${createdAt}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => console.error('Error fetching blogs:', error));
 });
-
-

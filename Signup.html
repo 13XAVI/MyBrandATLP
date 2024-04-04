@@ -9,23 +9,7 @@
 </head>
 <body>
 
-  
-  <div class="nav-bar">
-    <div class="log">
-      <img src="./components/images/Logo.jpg" alt="" class="logo-image" />
-      <span class="log-title">Tresor</span>
-    </div>
-    <div class="nav-content">
-      <a href="index.html" class="nav-content-home">Home</a>
-          <a href="index.html" class="nav-content-about">About us</a>
-          <a href="index.html" class="nav-content-contact">Contact us</a>
-          <a href="" class="nav-content-portfolio">Portfolio</a>
-          <a href="index.html" class="nav-content-blog">Blog</a>
-          <a   href="/PortfolioATLP/components/Signup.html" class="button-signup">
-            <button class=btn-signup>Signup</button>
-          </a>
-    </div>
-  </div>
+
 
   <div class="wrapper">
     <div class="sign-panels">
@@ -52,8 +36,9 @@
         <span id="password-error"></span>
         <input type="password" placeholder="Confirm Password" id="confirm-password">
         <span id="confirm-password-error"></span>
-        
+        <div id="errorMessage"></div>
         <button href="#" name="formSubmit" type="submit" value="" class="btn-signin" >Sign Up</button>
+        <div id="loadingMessage">Sending message...</div>
         <a href="signin.html" class="btn-login btn-fade" >Already have an account, Sign In <i
                 class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
     </form>
