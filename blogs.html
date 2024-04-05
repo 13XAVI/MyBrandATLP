@@ -18,7 +18,7 @@
                         <img src="./components/images/home.png" alt="" class="icon" />
                         <p class="header-title" href="admin.html">Home</p>
                     </a>
-                    <a class="pair" id="prof" href="u">
+                    <a class="pair" id="prof" href="./Users.html">
                         <img src="./components/images/profile.png" alt="" class="icon" />
                         <p class="header-title">Users</p>
                     </a>
@@ -78,11 +78,6 @@
                                         <input id="post-title" type="text" name="post-title" />
                                         <span class="error" id="error1"></span>
                                     </div>
-                                    <div class="form-field field-2 medium">
-                                        <label for="url-slug">Author</label>
-                                        <input id="url-slug" type="text" name="url-slug"/>
-                                        <span class="error" id="error2"></span>
-                                    </div>
                                 
                                     <div class="form-field field-3 medium">
                                         <label for="post-description">Post Description</label>
@@ -101,17 +96,9 @@
                                             <span class="error" id="error5"></span>
                                         </div>
                                            
-                                          <div class="form-field field-6 short">
-                                            <label for="email-notification">Email Notification</label>
-                                            <select id="email-notification" name="email-notification">
-                                                <option value="" disabled selected>Select</option>
-                                                <option value="email-all">Email all users</option>
-                                               <option value="email-paid">Email only members</option>
-                                                <option value="no-email">Do not send an email</option>
-                                            </select>
-                                            <span class="error" id="error6"></span>
-                                        </div>
                                     </div>
+
+                                    <span id="loading-message">sending data...</span>
                                 
                                     <div class="new-post-actions">
                                         <div class="button-container">

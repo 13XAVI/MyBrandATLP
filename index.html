@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./components/css/index.css" />
+        <link
+      rel="stylesheet"
+      href="components/css/swiper-bundle.min.css"
+    />
+    <script src="components//JS/swiper-bundle.min.js"></script>
+   
     <title>Document</title>
   </head>
   <body>
@@ -170,46 +176,20 @@
    
     <section  class="blogs" id="blogs">
       <h1 class="trendings">TRENGING BLOG...</h1>
-      <div class="allcards">
-       
-        <div class="card">
-          <img src="./components/images/standard-quality-control-concept-m.jpg" alt="" class="image-card">
-          <div class="description">
-            <p class="descriptio-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non fugiat unde consectetur in at exercitationem tempora reprehenderit laboriosam sit blanditiis, ratione quae provident, aliquam optio architecto quos. Velit, quam.</p>
-          </div>
-          <div class="log-des">
-            <img src="./components/images/Logo.jpg" alt="" class="profile-photo">
-            <p class="authordescription"> Mr.Tresor</p>
-            <button class="btn-arrow"><a href="SingleBlog.html"  class="auth-logo">More</a></button>
-          </div> 
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+     
         </div>
-        <div class="card">
-          <img src="./components/images/ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg" alt="" class="image-card">
-          <div class="description">
-            <p class="descriptio-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non fugiat unde consectetur in at exercitationem tempora reprehenderit laboriosam sit blanditiis, ratione quae provident, aliquam optio architecto quos. Velit, quam.</p>
-          </div>
-          <div class="log-des">
-            <img src="./components/images/Logo.jpg" alt="" class="profile-photo">
-            <p class="authordescription"> Mr.Tresor</p>
-            <button class="btn-arrow"><a  href="SingleBlog.html"  class="auth-logo">More</a></button>
-          </div> 
-        </div>
-        <div class="card">
-          <img src="./components/images/excited-black-man-exploring-virtual-reality-office.jpg" alt="" class="image-card">
-          <div class="description">
-            <p class="descriptio-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non fugiat unde consectetur in at exercitationem tempora reprehenderit laboriosam sit blanditiis, ratione quae provident, aliquam optio architecto quos. Velit, quam.</p>
-          </div>
-          <div class="log-des">
-            <img src="./components/images/Logo.jpg" alt="" class="profile-photo">
-            <p class="authordescription"> Mr.Tresor</p>
-            <button class="btn-arrow"><a  href="SingleBlog.html"  class="auth-logo">More</a></button>
-          </div> 
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
+     
       <h1 class="trendings">My Projects</h1>
       <div class="allcards">
        
-        <div class="card">
+        <div class="card ">
           <img src="./components/images/standard-quality-control-concept-m.jpg" alt="" class="image-card">
           <div class="description">
             <p class="descriptio-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non fugiat unde consectetur in at exercitationem tempora reprehenderit laboriosam sit blanditiis, ratione quae provident, aliquam optio architecto quos. Velit, quam.</p>
@@ -296,7 +276,7 @@
     </div>
   </body>
 
-  <script src="./components/JS/querry.js" defer>
-    
-  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./components/JS/BlogsUser.js" defer> </script>
 </html>
