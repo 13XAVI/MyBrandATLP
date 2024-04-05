@@ -560,3 +560,27 @@ th {
     text-decoration: none;
     cursor: pointer;
   }
+  .image-cell {
+    max-width: 80px;
+    max-height: 70px;
+}
+.action-button1 {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}.action-button2 {
+  padding: 5px 10px;
+  background-color: #913252;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+
