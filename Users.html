@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    <link rel="stylesheet" href="./components/css/Users.css">
     <link rel="stylesheet" href="./components/css/admin.css">
     <title>Crud App</title>
     <script src="./components/JS/Users.js" defer></script>
@@ -72,21 +70,34 @@
                 </div>
                 <div class="container">
                     <h1>User Management</h1>
+                    <div class="loading-container">
+                        <div class="loading" id="loading" style="margin-left: 5em;">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
                     <table class="user-table">
                         <thead>
-                            <tr>
-                                <th>Name</th>
+                            
+                            <tr style="width: 700px;">
+                                <th>Profile</th>
+                                <th>User Name</th>
                                 <th>Email</th>
                                 <th>Role</th>
-                                <th>Created At</th>
-                                <th>Updated At</th>
-                                <th>Action</th>
+                                <th>createdAt</th>
+                                <th>updatedAt</th>
+                                <th> Action Update </th>
+                                <th> Action Delete </th>
                             </tr>
+                    
                         </thead>
                         <tbody id="userTableBody">
                             
                         </tbody>
                     </table>
+                    <div id="paginationButtons">
+                        <button class="pagination-btn" id="prevPage">Previous</button>
+                        <button class="pagination-btn" id="nextPage">Next</button>
+                    </div>
                 </div>
 
                 <div id="editUserModal" class="modal">
@@ -95,6 +106,18 @@
                         <h2>Edit User</h2>
 
                         <form id="editUserForm">
+                            <div class="image-holder">
+                               <div class="profCircle">
+                                <img src='./components/images/profile.png' alt="" class="Profile-user">
+                               </div> 
+                            </div>
+                            <div class="containereditpg">
+                                <input type="file" id="fileInput" style="display: none;">
+                                <label for="fileInput">
+                                    <img src="./components/images/edit.png" alt="" class="editpg" id="editIcon">
+                                </label>
+                            </div>
+                            
                             <label for="editName">Name:</label>
                             <input type="text" id="editName" name="editName" required>
                             <label for="editEmail">Email:</label>
@@ -104,7 +127,9 @@
                                 <option value="admin">Admin</option>
                                 <option value="user">User</option>
                             </select>
-                            <button type="submit">Save Changes</button>
+                            <div class="btnupdatecont">
+                                <button type="submit" class="btn-update">Save Changes</button>
+                            </div>
                         </form>
                     </div>
                 </div>
