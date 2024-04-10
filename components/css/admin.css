@@ -16,9 +16,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 97vh;
-
+   justify-content: space-between;
+    margin-top: 0;
+    height: 95vh;
 }
 
 .middle {
@@ -224,7 +224,6 @@ th {
 
 .container {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,7 +236,6 @@ th {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 500px;
-    height: 80vh;
 }
 .update-profile{
     color: #B8B66E;
@@ -296,7 +294,7 @@ th {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 850px;
-    height: 60vh;
+    height: 63vh;
     margin-top: 4em;
     margin-left: 7em;
     display: flex;
@@ -386,9 +384,9 @@ th {
   }
   .main {
     width: 70%;
-    height: 90vh;
     display: flex;
     align-items: center;
+    position: fixed;
   }
   .main-container {
     background: #fff;
@@ -520,31 +518,6 @@ th {
     height: 20px;
   }
   
-
-
-  .modal {
-    display: none; 
-    position: fixed;
-    z-index: 1; 
-    padding-top: 100px; 
-    left: 0;
-    top: 0;
-    width: 900px; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-    align-items: center;
-  }
-  
-  .modal-content {
-    
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
   
  
   .close {
@@ -583,4 +556,192 @@ th {
 .action-button:hover {
   background-color: #0056b3;
 }
+.loading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 1em; 
+}
 
+.loading {
+  width: auto; 
+  height: 34px;
+}
+
+.loading span {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  background-color: #ffd927;
+  border-radius: 50%;
+  display: inline-block;
+  flex-direction: row; 
+  animation-name: dots;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.loading span:nth-child(2) {
+  background-color:  #ff8b57;
+  animation-delay: 0.4s;
+}
+
+.loading span:nth-child(3) {
+  background-color: #ffd927;
+  animation-delay: 0.8s;
+}
+
+@keyframes dots {
+  50% {
+    opacity: 0;
+    transform: scale(0.7) translateY(10px);
+  }
+}
+
+.container {
+   margin: 50px;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+#crudTable{
+  margin-bottom: 9em;
+
+}
+.error {
+  color: red; 
+  font-size: 14px; 
+  margin-top: 5px; 
+  display: block; 
+}
+.error-success{
+  color: green; 
+    font-size: 14px; 
+    margin-top: 5px; 
+    display: block; 
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.btn-danger, .edit-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-danger:hover, .edit-btn:hover {
+  background-color: #bb2d3b;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px; 
+  width: 90%; 
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+ .btnupdatecont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+.image-holder{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #aaaaaa;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: 100px;
+
+
+  
+}
+.Profile-user{
+  width:100px;
+  height: 100px;
+
+}
+
+
+.editpg{
+  width: 30px;
+  height: 30px;
+
+}
+.containereditpg{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 5em;
+}
+
+.btn-update{
+  background-color: #0B0D11;
+  margin-top: 30px;
+  width: 100px;
+  height: 32px;
+  color: #B8B66E;
+  border-radius: 20px; 
+  margin-right: 1em;
+}
+.profileUsers{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

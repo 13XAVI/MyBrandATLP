@@ -22,7 +22,6 @@ body, html {
 .logo-image {
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
 }
 
 .middle {
@@ -62,7 +61,7 @@ body, html {
     display: flex;
     margin-right: 10px;
     gap: 0px;
-    margin-bottom: 20px;
+ 
 }
 
 .card1, .card2, .card3 {
@@ -141,17 +140,15 @@ body, html {
     width: 150px;
 
 }
-
-.btn-action-add:hover{
-
-}
-
 .form-control {
     width: 400px;
     padding: .5em;
     border: 1px solid #ddd;
     border-radius: 4px;
     
+}
+.errorMessage{
+    margin-left: 0.6em ;
 }
 
 .btn {
@@ -194,92 +191,4 @@ body, html {
 .btn-Edit{
     border-radius: 10px;
     width: 75px;
-}
-.container {
-    margin-bottom: 10em;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-
-}
-#crudTable{
-    margin-bottom: 9em;
-
-}
-.error {
-    color: red; 
-    font-size: 14px; 
-    margin-top: 5px; 
-    display: block; 
-}
-.error-success{
-    color: green; 
-      font-size: 14px; 
-      margin-top: 5px; 
-      display: block; 
-  }
-
-
-table {
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: left;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-
-.btn-danger, .edit-btn {
-    background-color: #dc3545;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.btn-danger:hover, .edit-btn:hover {
-    background-color: #bb2d3b;
-}
-
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }

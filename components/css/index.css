@@ -196,7 +196,7 @@ padding-right: 20px;
     height: 32px;
     color: #B8B66E;;
     border-radius: 20px;
-    margin-top: 2em;
+    margin-top: 0.6em;
     margin-left: 1em;
 }
 
@@ -260,7 +260,7 @@ padding-right: 20px;
     padding: .4em;  
 }
 .message{
-    border-radius: 10px;
+    border-radius: 7px;
 }
 .form-group-fname {
     
@@ -387,8 +387,9 @@ padding-right: 20px;
     margin-left: 1em;
     border-radius: 20px;
 }
-.blogs{
-    
+
+.bloImage{
+    width: 700px;
 }
 .image-card{
     width: 440px;
@@ -755,9 +756,50 @@ padding: 2em;
     bottom: 20px; 
     right: 20px; 
   }
+  .loading{
+    margin-left: 6em;
+    padding: 0.4em;
+  }
+  .loading-container {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 1em; 
+  }
   
+  .loading span{
+    margin-left: 6em;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    background-color: #ffd927;
+    border-radius: 50%;
+    display: inline-block;
+    animation-name: dots;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.loading span:nth-child(2){
+    background-color: #34664c;
+    animation-delay: 0.4s;
+}
+.loading span:nth-child(3){
+    background-color: #ff8b57;
+    animation-delay: 0.8s;
+}
 
 
+
+
+@keyframes dots{
+    50%{
+        opacity: 0;
+        transform: scale(0.7)translateY(10px);
+    }
+}
 @media only screen and (max-width: 768px) {
     .nav-bar {
       flex-direction: column;
@@ -1097,8 +1139,13 @@ padding: 2em;
 
 
 .blog-item{
-    padding: 3em; 
-    margin-left: 9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    padding: 3em;
+    margin-left: 5em;
+   
 }
 .blog-title{
     display: flex;
@@ -1112,8 +1159,13 @@ padding: 2em;
     align-items: center;
 
 }
+.descr-des{
+    margin-left: 6em;
+}
 .image-blog{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-bottom: 20px;
    
 }
@@ -1125,13 +1177,18 @@ padding: 2em;
     margin-left: 8em;
 }
 .descr{
-    margin-left: 6em;
-    width: 65%;
-    display: flex;
+
+   
     flex-wrap: wrap;
     display: block;
     line-height: 1.5em;
     
+}
+.header-des{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .icon-blogs{
     margin-left: 5em;
@@ -1151,7 +1208,7 @@ padding: 2em;
     line-height: 1.4em;
 }
 .comment{
-    margin-top: 5em;
+    margin-top: 1em;
     margin-left: 6em;
     display: block;
     align-items: center;

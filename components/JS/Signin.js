@@ -32,9 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 errorMessage.innerHTML = responseData.error;
                 errorMessage.style.display = "block";
             } else {
-                const { token,role,email } = await response.json();
+                const { token,role,email,_id } = await response.json();
                 localStorage.setItem( 'email',email);
                 localStorage.setItem( "token",token);
+                localStorage.setItem( "userId",_id);
                 alert(`successful logged in as ${role}`);
                  
                 if (role === "admin") {
@@ -45,13 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } catch (error) {
             console.error("Error:", error);
-            errorMessage.innerHTML = "An error occurred";
+          alert("error in  loging in the user")
             errorMessage.style.display = "block";
             loadingMessage.style.display = "none";
         }
-         setTimeout(() => {
-            errorMessage.innerHTML = "An error occurred";
-         }, 4000);
     });
    
 });
